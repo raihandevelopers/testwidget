@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Widget Test - E-commerce Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            margin-bottom: 250px; /* Space for widget */
+        }
+
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .product-card h3 {
+            margin: 1rem 0;
+            color: #333;
+        }
+
+        .price {
+            color: #2ecc71;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 0.5rem 0;
+        }
+
+        .widget-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .buy-button {
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .buy-button:hover {
+            background-color: #27ae60;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Trendy Fashion Store</h1>
+    </header>
+
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b" alt="Fashion Item 1">
+            <h3>Casual White Sneakers</h3>
+            <p class="price">$89.99</p>
+            <button class="buy-button">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea" alt="Fashion Item 2">
+            <h3>Classic Leather Jacket</h3>
+            <p class="price">$199.99</p>
+            <button class="buy-button">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1544441893-675973e31985" alt="Fashion Item 3">
+            <h3>Denim Blue Jeans</h3>
+            <p class="price">$79.99</p>
+            <button class="buy-button">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa" alt="Fashion Item 4">
+            <h3>Running Shoes</h3>
+            <p class="price">$129.99</p>
+            <button class="buy-button">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="widget-container">
+        <iframe 
+            src="https://api.level-4u.com/api/reviews/widget/iframe/2e1600a7-52cf-4b9e-83c2-8be77b3ae612/" 
+            width="350" 
+            height="400" 
+            frameborder="0"
+            scrolling="no">
+        </iframe>
+    </div>
+</body>
+</html>
